@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+}
+
+.alinhar-extremidades {
+    justify-content: space-between;
+}
+
+.coluna {
+    flex-direction: column;
+}
+
+.esquerda-coluna {
+    align-items: flex-start;
+}
+
+.direita-coluna {
+    align-items: flex-end;
+}
+
+.centro {
+    align-items: center;
+    justify-content: center;
+}
+
+.centro-vertical {
+    align-items: center;
+}
+
+.centro-horizontal {
+    justify-content: center;
+}
+
+.esquerda {
+    justify-content: flex-start;
+}
+
+.direita {
+    justify-content: flex-end;
+}
