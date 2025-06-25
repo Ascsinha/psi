@@ -10,8 +10,8 @@ body {
 
 .container .info {
     background: linear-gradient(270deg, #000000 80%, rgba(0, 0, 0, 0.80) 90%, rgba(0, 0, 0, 0.00) 100%);
-    gap: 40px;
-    padding: 194px 200px 183px 110px;
+    gap: 25px;
+    padding: 100px 110px 95px 200px;
     position: absolute;
     width: 390px;
     z-index: 2;
@@ -22,4 +22,90 @@ body {
     position: relative;
     right: 600px;
     width: 850px;
+}
+
+.container .info .boas-vindas {
+    gap: 15px;
+}
+
+.container .info .boas-vindas h1 {
+    color: #FFFFFF;
+    font-family: "SUSE";
+    margin: 0;
+}
+
+.container .info .boas-vindas span {
+    color: #D0D0D0;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container .info form {
+    gap: 30px;
+    width: 100%;
+}
+
+.container .info form div {
+    gap: 20px;
+}
+
+.container .info form div input {
+    border-radius: 10px;
+    border: 3px solid #46B23E;
+    background: #FFFFFF;
+    font-family: "Inter";
+    padding: 15px 23px;
+}
+
+.container .info form div #nome {
+    background-image: url(../img/User.svg);
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    padding: 18px 40px;
+}
+
+.container .info form div #email {
+    background-image: url(../img/E-mail.svg);
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    padding: 18px 44px;
+}
+
+.container .info form div #telefone {
+    background-image: url(../img/Telefone.svg);
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    padding: 18px 44px;
+}
+
+.container .info form div #data_nascimento {
+    background-image: url(../img/);
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    padding: 18px 44px;
+}
+
+.container .info form div #senha {
+    background-image: url(../img/Senha.svg);
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    padding: 18px 44px;
+}
+
+.container .info form a {
+    background: #46B23E;
+    border-radius: 10px;
+    height: 51px;    
+    text-decoration: none;
+    width: 100%;
+}
+
+.container .info form a input {
+    background: #46B23E;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 500;
 }

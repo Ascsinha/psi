@@ -9,28 +9,30 @@
     <title>Cadastro</title>
 </head>
 <body>
-    
+
     <section class="container flex">
         <div class="info flex coluna centro">
             <div class="boas-vindas flex coluna">
                 <h1>Bem-vindo!</h1>
-                <span>Quer ter o PC High-End mais overpower? Cadastre-se em nossa loja e aproveite os melhores periféricos do mercado!</span>
+                <span>Quer ter o PC High-End mais overpower? Cadastre-se em nossa loja e aproveite os melhores
+                    periféricos do mercado!</span>
             </div>
-            <div class="cadastro flex coluna">
+            <form class="flex coluna">
                 <div class="flex coluna">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="tel" placeholder="Telefone" required>
-                    <input type="date" placeholder="Data de nascimento" required>
-                    <input type="password" placeholder="Senha" required>
+                    <input id="nome" type="text" placeholder="Nome" required>
+                    <input id="email" type="email" placeholder="E-mail" required>
+                    <input id="telefone" type="tel" placeholder="Telefone" required>
+                    <input id="data_nascimento" type="date" required>
+                    <input id="senha" type="password" placeholder="Senha" required>
                 </div>
-                <button type="submit">
-                    <a href="home.html">Entrar</a>
-                </button>
-            </div>
+                <a class="flex centro" href="../index.html">
+                    <input type="submit" placeholder="Enviar">
+                </a>
+            </form>
         </div>
         <img class="fundo" src="../assets/img/PC-verde.png" alt="">
     </section>
 
 </body>
+
 </html>
