@@ -10,26 +10,26 @@
 </head>
 <body>
     
-    <section class="flex">
-        <div class="flex">
-            <div class="flex">
+    <section class="container flex">
+        <div class="info flex coluna centro">
+            <div class="boas-vindas flex coluna">
                 <h1>Bem-vindo!</h1>
                 <span>Quer ter o PC High-End mais overpower? Cadastre-se em nossa loja e aproveite os melhores periféricos do mercado!</span>
             </div>
-            <div class="flex">
-                <div class="flex">
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="E-mail">
-                    <input type="text" placeholder="Telefone">
-                    <input type="text" placeholder="Senha">
-                    <input type="text" placeholder="Confirme sua senha">
+            <div class="cadastro flex coluna">
+                <div class="flex coluna">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="tel" placeholder="Telefone" required>
+                    <input type="date" placeholder="Data de nascimento" required>
+                    <input type="password" placeholder="Senha" required>
                 </div>
-                <a href="">
-                    <h3>Entrar</h3>
-                </a>
+                <button type="submit">
+                    <a href="home.html">Entrar</a>
+                </button>
             </div>
         </div>
-        <img src="../assets/img/PC-verde.png" alt="">
+        <img class="fundo" src="../assets/img/PC-verde.png" alt="">
     </section>
 
 </body>

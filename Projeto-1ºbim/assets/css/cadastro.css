@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
+
+body {
+    margin: 0;
+}
+
+.container {
+    flex-direction: row-reverse;
+}
+
+.container .info {
+    background: linear-gradient(270deg, #000000 80%, rgba(0, 0, 0, 0.80) 90%, rgba(0, 0, 0, 0.00) 100%);
+    gap: 40px;
+    padding: 194px 200px 183px 110px;
+    position: absolute;
+    width: 390px;
+    z-index: 2;
+}
+
+.container .fundo {
+    height: 770px;
+    position: relative;
+    right: 600px;
+    width: 850px;
+}

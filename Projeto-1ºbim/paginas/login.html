@@ -13,41 +13,41 @@
 <body>
 
     <section class="container flex">
-        <div class="login flex centralizar coluna">
-            <div class="flex coluna">
+        <div class="login flex coluna">
+            <div class="info flex coluna">
                 <h1>Faça seu login!</h1>
-                <div class="flex coluna">
-                    <div class="flex coluna">
-                        <div class="flex coluna">
-                            <input type="text" placeholder="E-mail">
-                            <input type="text" placeholder="Senha">
+                <form class="flex coluna">
+                    <div class="validacao flex coluna">
+                        <div class="campos flex coluna">
+                            <input id="E-mail" type="email" placeholder="E-mail" required>
+                            <input id="Senha" type="password" placeholder="Senha" required>
                         </div>
-                        <div class="flex">
+                        <div class="flex direita">
                             <a href="#">Esqueceu a senha?</a>
                         </div>
                     </div>
-                    <div class="flex coluna">
-                        <a href="">
-                            <h3>Entrar</h3>
-                        </a>
-                        <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+                    <div class="entrar flex coluna">
+                        <button type="submit">
+                            <a href="home.html">Entrar</a>
+                        </button>
+                        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
                     </div>
-                </div>
+                </form>
             </div>
-            <div>
+            <div class="flex coluna centro">
                 <h2>Entrar com:</h2>
-                <div class="flex">
-                    <div class="flex centralizar">
-                        <img src="" alt="">
+                <div class="plataformas flex centro-vertical">
+                    <div class="flex centro">
+                        <img src="../assets/img/Google.svg" alt="">
                     </div>
-                    <div class="flex centralizar">
-                        <img src="" alt="">
+                    <div class="flex centro">
+                        <img src="../assets/img/Facebook.svg" alt="">
                     </div>
-                    <div class="flex centralizar">
-                        <img src="" alt="">
+                    <div class="flex centro">
+                        <img src="../assets/img/Linkedin.svg" alt="">
                     </div>
-                    <div class="flex centralizar">
-                        <img src="" alt="">
+                    <div class="flex centro">
+                        <img src="../assets/img/Apple.svg" alt="">
                     </div>
                 </div>
             </div>
