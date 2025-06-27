@@ -13,6 +13,7 @@ body {
 header {
     background-color: #000000;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 header .container {
@@ -58,8 +59,112 @@ header .container .abas div a:nth-child(3) img {
     width: 40px;
 }
 
+main .container {
+    display: grid;    
+    gap: 20px;
+}
+
+main .container .topo h1 {
+    color: #FFFFFF;
+    font-family: "SUSE";
+    font-size: 32px;
+    margin: 0;
+}
+
+main .container .topo div {
+    height: 40px;
+}
+
+main .container .topo div select {
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    color: #000000;
+    font-family: "Inter";
+    padding: 0 5px;
+}
+
+main .container .produtos {
+    gap: 50px 0;
+    grid-auto-flow: row;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: space-between;
+}
+
+main .container .produtos .card-produto {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    width: 85%;
+}
+
+main .container .produtos .card-produto .produto div h5 {
+    color: #000000;
+    font-family: "Inter";
+    line-height: 150%;
+    margin: 0;
+    width: 100%;
+}
+
+main .container .produtos .card-produto .produto img {
+    height: 60%;
+    width: 60%;
+}
+
+main .container .produtos .card-produto .produto .info {
+    font-family: "Inter";
+    gap: 15px;
+}
+
+main .container .produtos .card-produto .produto .info p,
+main .container .produtos .card-produto .produto .info h3 {
+    margin: 0;
+}
+
+main .container .produtos .card-produto .produto .info span a {
+    color: #D51D17;
+    text-decoration: none;
+}
+
+main .container .produtos .card-produto .produto .info div {
+    gap: 5px;
+}
+
+main .container .produtos .card-produto .produto .info div a {
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px 12px 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+}
+
+main .container .produtos .card-produto .produto .info div a:nth-child(1) {
+    background-color: #46B23E;
+}
+
+main .container .produtos .card-produto .produto .info div a:nth-child(2) {
+    background-color: #D51D17;
+}
+
+main .container .botao-catalogo-lp {
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: "Inter";
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+}
+
+main .container .botao-catalogo-lp:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: 600;
+}
+
 footer {
     background-color: #000000;
+    margin-top: 100px;
 }
 
 footer .container .info-rodape {
@@ -80,6 +185,7 @@ footer .container .info-rodape ul {
     gap: 90px;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 footer .container .info-rodape ul li a {
@@ -88,4 +194,13 @@ footer .container .info-rodape ul li a {
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
+}
+
+footer .container .info-rodape .redes-sociais {
+    gap: 20px;
+}
+
+footer .container .info-rodape .redes-sociais img {
+    height: 20px;
+    width: 20px;
 }

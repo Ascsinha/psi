@@ -312,15 +312,25 @@ footer .container .info-rodape .loja img:nth-child(1) {
 }
 
 footer .container .info-rodape ul {
-    gap: 90px;
+    gap: 50px;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 footer .container .info-rodape ul li a {
     color: #FFFFFF;
     font-family: "Inter";
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+}
+
+footer .container .info-rodape .redes-sociais {
+    gap: 20px;
+}
+
+footer .container .info-rodape .redes-sociais img {
+    height: 20px;
+    width: 20px;
 }

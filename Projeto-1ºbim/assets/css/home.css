@@ -60,6 +60,7 @@ header .container .abas div a:nth-child(3) img {
 
 main .container {
     gap: 50px;
+    margin-bottom: 100px;
 }
 
 main .fundo {
@@ -327,6 +328,7 @@ footer .container .info-rodape ul {
     gap: 90px;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 footer .container .info-rodape ul li a {
@@ -335,4 +337,13 @@ footer .container .info-rodape ul li a {
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
+}
+
+footer .container .info-rodape .redes-sociais {
+    gap: 20px;
+}
+
+footer .container .info-rodape .redes-sociais img {
+    height: 20px;
+    width: 20px;
 }
