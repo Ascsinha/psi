@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Integração com o JavaScript</title>
+</head>
+<body>
+
+    <p id="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores suscipit earum temporibus natus repudiandae alias unde iste. Impedit, expedita voluptas repellendus, asperiores earum culpa doloribus eos modi suscipit ducimus sequi!</p>
+
+    <script>
+        document.getElementById("paragrafo").innerHTML = 'teste';
+        document.getElementById("paragrafo").style.fontSize = '25px';
+        documento.getElementById("paragrafo").style.color = 'white';
+        document.getElementById("paragrafo").style.backgroundColor = 'black';
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+        const saudacao = 'Olá! Bem-vindo!';
+        console.log(saudacao)
+    </script>
+
+    <div class="bg-success p-2 text-white">Background verde</div>
+    <br>
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    <style>
+        body {
+            background-image: url('https://t2.tudocdn.net/610097?w=1920');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <script>
+        const imgElement = document.createElement('img');
+
+        imgElement.src = 'https://m.media-amazon.com/images/M/MV5BMjE4MTcwMTM1Nl5BMl5BanBnXkFtZTcwMTIwMzMzMw@@._V1_.jpg';
+        imgElement.alt = 'Wall-E';
+        imgElement.width = 400;
+        imgElement.height = 400;
+
+        document.body.appendChild(imgElement);
+    </script>
+
+</body>
+</html>
