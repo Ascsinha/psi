@@ -121,3 +121,76 @@ function somaTodosValores(valores) {
 }
 
 console.log(somaTodosValores(10, 20, 30, 40))
+
+// Filter
+const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 22, 27]
+
+const numerosFiltrados = numeros.filter((valor, indice, array)=>{
+    if (valor > 10) {
+        return true
+    } 
+    else {
+        return false
+    }
+})
+
+console.log(numerosFiltrados)
+
+const numerosPares = numeros.filter((valor)=> {
+    if (valor % 2 === 0) {
+        return true
+    }
+    else {
+        return false
+    }
+})
+
+console.log(numerosPares)
+
+// As pessoas que têm o nome com 5 letras ou mais (lenght)
+// As pessoas com mais de 50 anos
+// As pessoas que o nome termina com 'a' (endsWith('a'))
+
+const pessoas = [
+    {nome: 'Tiago', idade: 29},
+    {nome: 'João', idade: 19},
+    {nome: 'Maria', idade: 43},
+    {nome: 'Joana', idade: 63},
+    {nome: 'Wallace', idade: 67}
+]
+
+const pessoasComNomeGrande = pessoas.filter((valor)=>{
+    if (valor.nome.length >= 5) {
+        return true
+    }
+})
+console.log(pessoasComNomeGrande)
+
+// Retorne apenas o nome das pessoas
+// Adicione uma chave 'indice' que receberá o valor do indice de cada elemento
+
+
+const nomes = pessoas.map((valor) => {
+    return valor.nome
+})
+console.log(nomes)
+
+const comIds = pessoas.map((valor, indice) => {
+    valor.id = indice
+    return valor
+})
+console.log(comIds)
+
+// REDUCE
+
+const numero = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 22, 27]
+
+// Map com reduce
+const numerosReduce = numero.reduce((acumulador, valor, indice, array) => {
+    if (valor % 2 === 0) {
+        acumulador.push(valor)
+    }
+    return acumulador
+}, [])
+
+console.log(numerosReduce)
