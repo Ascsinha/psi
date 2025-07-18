@@ -194,3 +194,25 @@ const numerosReduce = numero.reduce((acumulador, valor, indice, array) => {
 }, [])
 
 console.log(numerosReduce)
+
+// PROMISES ASYNC E AWAIT
+// O que tínhamos antes com callbacks
+
+function rand(min, max) {
+    return Math.floor(Math.random() * (max-min) + min)
+}
+
+function esperaAi(msg, tempo){
+    setTimeout(() => {
+        console.log(msg)   
+        if (callback){
+            callback()
+        }     
+    }, tempo)
+}
+
+esperaAi('Frase 1', rand(1000, 5000), function(){
+    esperaAi('Frase 2', rand(1000, 5000), function(){
+        esperaAi('Frase 3', rand(1000, 5000))
+    })
+})
