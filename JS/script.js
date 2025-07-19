@@ -1,4 +1,4 @@
-console.log("Olá Mundo!"); //Equivalente ao print do Python.
+ console.log("Olá Mundo!"); //Equivalente ao print do Python.
 
 let nome = "Acsa"; //Variável let para valores mutáveis.
 let lista = [1, 2, 3];
@@ -168,7 +168,6 @@ console.log(pessoasComNomeGrande)
 
 // Retorne apenas o nome das pessoas
 // Adicione uma chave 'indice' que receberá o valor do indice de cada elemento
-
 
 const nomes = pessoas.map((valor) => {
     return valor.nome

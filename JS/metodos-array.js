@@ -69,7 +69,6 @@ console.log()*/
 
 // Funções callback
 
-
 function rand(min = 1000, max = 5000) {
     const num = Math.random() * (max-min) + min
     return Math.floor(num)
@@ -91,6 +90,7 @@ function f1(callback){
         }
     }, rand())
 }
+
 function f2(callback){
     setTimeout(function(){
         console.log('Aguardando...')
