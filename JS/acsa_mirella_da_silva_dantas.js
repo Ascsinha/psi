@@ -73,7 +73,6 @@ function comprarProd(carteira, prod) {
 
 console.log(comprarProd(123.0, 123.0))
 
-
 // Questão 9
 const elementosSite = [
     {
