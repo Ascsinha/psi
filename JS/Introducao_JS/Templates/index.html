@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Introdução ao JavaScript</title>
 </head>
+
 <body>
+
     <header>
         <section>
-            <img src="" alt="">
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Catalogo</li>
-                    <li>Sobre Nós</li>
-                    <li>Contato</li>
-                </ul>
-            </nav>
+            <div>
+                <img id="mtag">
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Catalogo</li>
+                        <li>Sobre Nós</li>
+                        <li>Contato</li>
+                    </ul>
+                </nav>
+            </div>
         </section>
     </header>
     <main>
         <section>
             <div>
-                <h1>Órion 2026</h1>
+                <h1 id="titulo">Órion 2026</h1>
                 <div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quis perferendis vitae enim nesciunt fugit quam pariatur quasi, veritatis blanditiis libero, veniam reprehenderit excepturi quibusdam officia cum totam laboriosam. Perspiciatis! Voluptatem, suscipit. Reprehenderit reiciendis tempora expedita eos vitae in esse hic animi neque? Nulla placeat nesciunt sunt inventore quidem, tempore autem doloribus deserunt commodi obcaecati? Sunt, mollitia? Maiores, sed ex! Id, laboriosam iure sapiente eligendi saepe sit accusamus hic, praesentium distinctio delectus quo tempora sunt? Eaque neque animi reiciendis saepe autem libero quaerat. Amet repudiandae aliquid blanditiis, praesentium placeat numquam. Sit provident sequi accusantium repudiandae? Laboriosam soluta iure voluptas quo obcaecati facilis commodi expedita neque incidunt, sunt possimus suscipit porro quos sint cum nisi accusantium voluptatem. Fuga mollitia minus accusantium!</p>
+                    <p id="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quis perferendis vitae enim
+                        nesciunt fugit quam pariatur quasi, veritatis blanditiis libero, veniam reprehenderit excepturi
+                        quibusdam officia cum totam laboriosam. Perspiciatis! Voluptatem, suscipit. Reprehenderit
+                        reiciendis tempora expedita eos vitae in esse hic animi neque? Nulla placeat nesciunt sunt
+                        inventore quidem, tempore autem doloribus deserunt commodi obcaecati? Sunt, mollitia? Maiores,
+                        sed ex! Id, laboriosam iure sapiente eligendi saepe sit accusamus hic, praesentium distinctio
+                        delectus quo tempora sunt? Eaque neque animi reiciendis saepe autem libero quaerat. Amet
+                        repudiandae aliquid blanditiis, praesentium placeat numquam. Sit provident sequi accusantium
+                        repudiandae? Laboriosam soluta iure voluptas quo obcaecati facilis commodi expedita neque
+                        incidunt, sunt possimus suscipit porro quos sint cum nisi accusantium voluptatem. Fuga mollitia
+                        minus accusantium!</p>
+                </div>
+            </div>
+            <div>
+                <h1 id="titulo2">Nossa história</h1>
+                <div>
+                    <p id="texto2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis perferendis beatae, error animi laboriosam, vero voluptatibus nam repellat minus ducimus sapiente architecto impedit, suscipit nobis? Voluptatibus aut recusandae sed quos!
+                    Consequatur incidunt dolor, voluptates nam debitis doloremque nostrum atque libero asperiores quod at commodi eligendi maiores. Ut, unde, quidem delectus laboriosam nemo illum, deleniti rem inventore vitae molestias soluta quae!
+                    Quia eveniet ut, eum in saepe debitis laborum labore alias quas fugiat repellat cupiditate voluptatibus consectetur cumque. Assumenda ex excepturi nostrum optio soluta modi, aliquam, pariatur quis ipsa neque libero.
+                    Explicabo ad, eaque sapiente dignissimos maiores totam odit? Esse tenetur incidunt odio cumque eius? Aspernatur voluptatem commodi a id corrupti quos numquam perferendis ea eligendi, similique, iure explicabo quis nostrum!
+                    Possimus, vero consequuntur modi, nostrum a saepe beatae deleniti, dolores quo officia distinctio odio quos! Quo dolores at quidem sunt adipisci, ex quos facere, ab, suscipit ipsam ad dolore esse.</p>
                     <img src="" alt="">
                 </div>
             </div>
-            
+            <div>
+                <h1 id="titulo3">Algumas imagens</h1>
+                <div>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -45,11 +77,65 @@
     </footer>
 
     <style>
+        body {
+            margin: 0px;
+        }
 
+        section {
+            margin: 0 90px 0 90px;
+        }
+
+        header {
+            background-color: brown;
+            padding: 30px 0 30px 0;
+        }
+
+        header section div {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        header section div nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+        }
+
+        footer {
+            background-color: brown;
+            padding: 30px 0 30px 0;
+        }
+
+        footer div ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+        }
     </style>
 
     <script>
-        
+        document.getElementById("titulo").style.fontSize = '24px';
+        document.getElementById("titulo").style.color = 'blue';
+        document.getElementById("titulo").style.fontFamily = 'Arial';
+
+        document.getElementById("texto").innerHTML = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quis perferendis vitae enimnesciunt fugit quam pariatur quasi, veritatis blanditiis libero, veniam reprehenderit excepturiquibusdam officia cum totam laboriosam. Perspiciatis! Voluptatem, suscipit. Reprehenderitreiciendis tempora expedita eos vitae in esse hic animi neque? Nulla placeat nesciunt suntinventore quidem, tempore autem doloribus deserunt commodi obcaecati? Sunt, mollitia? Maiores,sed ex! Id, laboriosam iure sapiente eligendi saepe sit accusamus hic, praesentium distinctiodelectus quo tempora sunt? Eaque neque animi reiciendis saepe autem libero quaerat. Ametrepudiandae aliquid blanditiis, praesentium placeat numquam. Sit provident sequi accusantiumrepudiandae? Laboriosam soluta iure voluptas quo obcaecati facilis commodi expedita nequeincidunt, sunt possimus suscipit porro quos sint cum nisi accusantium voluptatem. Fuga mollitiaminus accusantium!';
+        document.getElementById("texto").style.fontSize = '12px';
+        documento.getElementById("texto").style.color = 'white';
+        document.getElementById("texto").style.backgroundColor = 'black';
+
+        const mtag = img.getElementById('mtag');
+        const elementoImg = document.createElement('dc');
+
+        elementoImg.src = 'https://e7.pngegg.com/pngimages/942/380/png-clipart-dc-comics-logo-icons-logos-emojis-iconic-brands.png';
+        elementoImg.width = 30;
+        elementoImg.height = 30;
+
+        mtag.appendChild(elementoImg);
     </script>
+
 </body>
 </html>
