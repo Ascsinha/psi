@@ -12,13 +12,9 @@
     <header>
         <section>
             <div>
-                <img id="mtag">
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Catalogo</li>
-                        <li>Sobre Nós</li>
-                        <li>Contato</li>
+                        <li id="nav-text">Home</li>
                     </ul>
                 </nav>
             </div>
@@ -55,10 +51,10 @@
             </div>
             <div>
                 <h1 id="titulo3">Algumas imagens</h1>
-                <div>
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <div class="ladoalado">
+                    <div id="mtag"></div>
+                    <div id="mtag2"></div>
+                    <div id="mtag3"></div>
                 </div>
             </div>
         </section>
@@ -67,10 +63,7 @@
         <section>
             <div>
                 <ul>
-                    <li>Home</li>
-                    <li>Catalogo</li>
-                    <li>Sobre Nós</li>
-                    <li>Contato</li>
+                    <li id="footer-text">Home</li>
                 </ul>
             </div>
         </section>
@@ -86,7 +79,7 @@
         }
 
         header {
-            background-color: brown;
+            background-color: blue;
             padding: 30px 0 30px 0;
         }
 
@@ -96,16 +89,29 @@
             justify-content: space-between;
             width: 100%;
         }
+
+        header section div nav {
+            display: flex;
+            width: 100%;
+        }
         
         header section div nav ul {
             display: flex;
             gap: 20px;
+            justify-content: right;
             list-style: none;
-            margin: 0;
+            width: 100%;
+        }
+
+        main div .ladoalado {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            justify-content: center;
         }
 
         footer {
-            background-color: brown;
+            background-color: blue;
             padding: 30px 0 30px 0;
         }
 
@@ -113,29 +119,59 @@
             display: flex;
             gap: 20px;
             list-style: none;
-            margin: 0;
         }
     </style>
 
     <script>
+
+        document.getElementById("nav-text").style.color = 'white';
+        document.getElementById("nav-text").style.fontFamily = "Arial";
+        document.getElementById("nav-text").style.fontSize = '14px';
+
+        document.getElementById("footer-text").style.color = 'white';
+        document.getElementById("footer-text").style.fontFamily = "Arial";
+        document.getElementById("footer-text").style.fontSize = '14px';
+
         document.getElementById("titulo").style.fontSize = '24px';
         document.getElementById("titulo").style.color = 'blue';
         document.getElementById("titulo").style.fontFamily = 'Arial';
 
         document.getElementById("texto").innerHTML = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quis perferendis vitae enimnesciunt fugit quam pariatur quasi, veritatis blanditiis libero, veniam reprehenderit excepturiquibusdam officia cum totam laboriosam. Perspiciatis! Voluptatem, suscipit. Reprehenderitreiciendis tempora expedita eos vitae in esse hic animi neque? Nulla placeat nesciunt suntinventore quidem, tempore autem doloribus deserunt commodi obcaecati? Sunt, mollitia? Maiores,sed ex! Id, laboriosam iure sapiente eligendi saepe sit accusamus hic, praesentium distinctiodelectus quo tempora sunt? Eaque neque animi reiciendis saepe autem libero quaerat. Ametrepudiandae aliquid blanditiis, praesentium placeat numquam. Sit provident sequi accusantiumrepudiandae? Laboriosam soluta iure voluptas quo obcaecati facilis commodi expedita nequeincidunt, sunt possimus suscipit porro quos sint cum nisi accusantium voluptatem. Fuga mollitiaminus accusantium!';
-        document.getElementById("texto").style.fontSize = '12px';
-        documento.getElementById("texto").style.color = 'white';
+        document.getElementById("texto").style.fontSize = '14px';
+        document.getElementById("texto").style.color = 'white';
         document.getElementById("texto").style.backgroundColor = 'black';
 
-        const mtag = img.getElementById('mtag');
-        const elementoImg = document.createElement('dc');
+        const imgOrion = document.createElement('img');
+        
+        imgOrion.src = 'https://starwalk.space/gallery/images/orion-constellation-main-picture/pt/1920x1080.jpg';
+        imgOrion.alt = "Guerreiro Órion";
+        imgOrion.width = 450;
+        imgOrion.height = 300;
+        
+        const container = document.getElementById('mtag');
+        container.appendChild(imgOrion);
 
-        elementoImg.src = 'https://e7.pngegg.com/pngimages/942/380/png-clipart-dc-comics-logo-icons-logos-emojis-iconic-brands.png';
-        elementoImg.width = 30;
-        elementoImg.height = 30;
 
-        mtag.appendChild(elementoImg);
-    </script>
+        const imgOrioneSirius = document.createElement('img');
+        
+        imgOrioneSirius.src = 'https://astrotourismwa.com.au/wp-content/uploads/2024/01/orion-the-hunter.jpg';
+        imgOrioneSirius.alt = "Guerreiro Órion e Sirius";
+        imgOrioneSirius.width = 450;
+        imgOrioneSirius.height = 300;
+        
+        const container2 = document.getElementById('mtag2');
+        container2.appendChild(imgOrioneSirius);
 
+
+        const imgOrionHumano = document.createElement('img');
+        
+        imgOrionHumano.src = 'https://i.pinimg.com/736x/f8/02/32/f8023231f6d9cc0760f47231700d860e.jpg';
+        imgOrionHumano.alt = "Guerreiro Órion Humano";
+        imgOrionHumano.width = 200;
+        imgOrionHumano.height = 300;
+        
+        const container3 = document.getElementById('mtag3');
+        container3.appendChild(imgOrionHumano);
+</script>
 </body>
 </html>
