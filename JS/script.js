@@ -1,4 +1,4 @@
- console.log("Olá Mundo!"); //Equivalente ao print do Python.
+console.log("Olá Mundo!"); //Equivalente ao print do Python.
 
 let nome = "Acsa"; //Variável let para valores mutáveis.
 let lista = [1, 2, 3];
