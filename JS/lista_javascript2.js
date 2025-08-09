@@ -68,13 +68,46 @@ consultarPaciente('Acsa')
     })
 
 // Questão 6
-async function agendarConsulta() {
+async function agendarConsulta(nomePaciente) {
     try {
-        let consulta = await consultarPaciente(nomePaciente)
+        const paciente = await consultarPaciente(nomePaciente)
+        console.log(`Consulta agendada para ${paciente} com sucesso.`)
     }
     catch(error) {
-        console.log(err)
+        console.log(error)
     }
-    console.log(`Consulta agendada para ${nomePaciente} com sucesso.`)
 }
 
+agendarConsulta('Acsa')
+
+// Questão 7
+function verificarHorario(atualHora) {
+    return new Promise((resolve, reject) => {
+        if (atualHora) {
+            resolve(atualHora)
+        }
+        else {
+            reject()
+        }
+    }
+)}
+
+verificarHorario(15)
+    .then(atualHora => {
+        console.log(`Consulta agendada foi agendada para às ${atualHora}h com sucesso.`)
+    })
+    .catch(error => {
+        console.log('Erro: nome do paciente não pode ser vazio.')
+    })
+
+async function checarAtendimento(atualHora) {
+    try {
+        const horario = await verificarHorario(atualHora)
+        console.log(`Você tem consulta agendada às ${horario}h.`)
+    }
+    catch(error) {
+        console.log('Você não tem horário marcado.')
+    }
+}
+
+checarAtendimento(15)
