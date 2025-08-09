@@ -6,6 +6,75 @@ const saudacao = ((nome) =>{
 saudacao('Acsa')
 
 // Questão 2
-function executarOperacao() {
-    
+function executarOperacao(num1, num2, callback) {
+    return callback(num1, num2); 
 }
+
+const somar = (a, b) => a + b
+const mult = (a, b) => a * b
+
+console.log(executarOperacao(2, 5, somar))
+console.log(executarOperacao(2, 5, mult))
+
+// Questão 3
+function exibirMensagem(nomePessoa, callback) {
+    return callback(nomePessoa);
+}
+
+const mensagemDeBoasVindas = (nome) => `Seja bem-vindo, ${nome}!`
+const mensagemDeDespedida = (nome) => `Até logo, ${nome}!`
+
+console.log(exibirMensagem('Acsa', mensagemDeBoasVindas))
+console.log(exibirMensagem('Acsa', mensagemDeDespedida))
+
+// Questão 4
+function verificarNumero(numeroValido) {
+    return new Promise((resolve, reject) => {
+        if (numeroValido >= 0) {
+            resolve(numeroValido)
+        }
+        else {
+            reject()
+        }
+    }
+)}
+
+verificarNumero(234)
+    .then(numeroValido => {
+        console.log(`Número válido: ${numeroValido}.`)
+    })
+    .catch(error => {
+        console.log(`Erro: número negativo não é permitido.`)
+    })
+
+// Questão 5
+function consultarPaciente(nomePaciente) {
+    return new Promise((resolve, reject) => {
+        if (nomePaciente) {
+            resolve(nomePaciente)
+        }
+        else {
+            reject()
+        }
+    }
+)}
+
+consultarPaciente('Acsa')
+    .then(nomePaciente => {
+        console.log(`Consulta agendada para ${nomePaciente} com sucesso.`)
+    })
+    .catch(error => {
+        console.log('Erro: nome do paciente não pode ser vazio.')
+    })
+
+// Questão 6
+async function agendarConsulta() {
+    try {
+        let consulta = await consultarPaciente(nomePaciente)
+    }
+    catch(error) {
+        console.log(err)
+    }
+    console.log(`Consulta agendada para ${nomePaciente} com sucesso.`)
+}
+
