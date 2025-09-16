@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/Logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <title>Exemplo</title>
+</head>
+
+<body>
+
+    <header class="flex coluna">
+        <section class="container flex centro-vertical alinhar-extremidades">
+            <a class="flex centro-vertical" href="index.html">
+                <img src="assets/img/Logo.svg" alt="">
+                <img src="assets/img/Marca.svg" alt="">
+            </a>
+            <div class="abas flex centro-vertical">
+                <nav>
+                    <ul class="flex centro-vertical">
+                        <li><a href="paginas/catalogo.html">Catálogo</a></li>
+                        <li><a href="paginas/sobre-nos.html">Sobre Nós</a></li>
+                    </ul>
+                </nav>
+                <div class="flex centro-vertical">
+                    <a href="paginas/login.html">Entrar</a>
+                    <a href="{{ url_for('exemplo2') }}">Cadastre-se</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="flex coluna">
+        <div class="fundo flex">
+            <section class="container flex alinhar-extremidades centro-vertical">
+                <img src="assets/img/Seta-esquerda.svg" alt="">
+                <img src="assets/img/Seta-direita.svg" alt="">
+            </section>
+        </div>
+
+        <section class="container flex coluna">
+            <div class="texto flex alinhar-extremidades">
+                <img src="assets/img/Memoria-ram.jpg" alt="">
+                <div class="flex coluna centro-horizontal">
+                    <h1>Um pouco sobre nós</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae
+                        pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed
+                        diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl
+                        malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad
+                        litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis
+                        dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis
+                        scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris
+                        pharetra vestibulum fusce dictum risus.</p>
+                    <a href="paginas/sobre.html">Ir para Sobre Nós</a>
+                </div>
+            </div>
+            <div class="significado-cores flex centro-vertical">
+                <h1>Significado das cores</h1>
+                <div class="cores flex centro-vertical">
+                    <div class="flex coluna centro-vertical">
+                        <span></span>
+                        <h3>Vermelho</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae
+                            pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean
+                            sed
+                            diam.</p>
+                    </div>
+                    <div class="flex coluna centro-vertical">
+                        <span></span>
+                        <h3>Verde</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae
+                            pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean
+                            sed
+                            diam.</p>
+                    </div>
+                    <div class="flex coluna centro-vertical">
+                        <span></span>
+                        <h3>Preto</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae
+                            pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean
+                            sed
+                            diam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="fundo-catalogo-lp flex centro">
+            <section class="container flex coluna centro">
+                <div class="flex coluna centro">
+                    <h2>Catálogo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae
+                        pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed
+                        diam.</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="container flex coluna centro-vertical alinhar-extremidades">
+            <div class="produtos flex centro-vertical alinhar-extremidades">
+                <div class="card-produto flex coluna">
+                    <div class="produto flex coluna centro">
+                        <img src="assets/img/Monitor-ASUS.jpg" alt="">
+                        <div class="info flex coluna">
+                            <h5>ASUS TUF Gaming Monitor de jogos HDR de 27 polegadas, Full HD 1080p (1920 x 1080) IPS
+                                rápido, 280Hz, G-SYNC, sincronização de desfoque de movimento extremo baixo (ELMB SYNC)
+                                1ms, tela HDR 400</h5>
+                            <p>Preço:
+                            <h3>R$ 2000,00</h3>
+                            </p>
+                            <span>
+                                Marca: <a href="www.amazon.com.br">Amazon</a>
+                            </span>
+                            <div class="flex coluna centro">
+                                <a href="">Comprar</a>
+                                <a href="">Adicionar ao carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-produto flex coluna">
+                    <div class="produto flex coluna centro">
+                        <img src="assets/img/Aorus-Z890.jpg" alt="">
+                        <div class="info flex coluna">
+                            <h5>Placa Mãe Gigabyte Z890 Aorus Master Wifi 7 Intel LGA 1851 4xDDR5 Chipset Z890 Atx</h5>
+                            <p>Preço:
+                            <h3>R$ 2000,00</h3>
+                            </p>
+                            <span>
+                                Marca: <a href="https://www.gigabyte.com/br">Gigabyte</a>
+                            </span>
+                            <div class="flex coluna centro">
+                                <a href="">Comprar</a>
+                                <a href="">Adicionar ao carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-produto flex coluna">
+                    <div class="produto flex coluna centro">
+                        <img src="assets/img/Mouse-G502.jpg" alt="">
+                        <div class="info flex coluna">
+                            <h5>Mouse Gamer Sem Fio Logitech G502 LIGHTSPEED com HERO 16K, RGB LIGHTSYNC, Ajuste de
+                                Peso, 11 Botões Programáveis, Compatível com POWERPLAY</h5>
+                            <p>Preço:
+                            <h3>R$ 2000,00</h3>
+                            </p>
+                            <span>
+                                Marca: <a href="https://www.logitechg.com/pt-br">Logitech</a>
+                            </span>
+                            <div class="flex coluna centro">
+                                <a href="">Comprar</a>
+                                <a href="">Adicionar ao carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-produto flex coluna">
+                    <div class="produto flex coluna centro">
+                        <img src="assets/img/RTX5070ti.webp" alt="">
+                        <div class="info flex coluna">
+                            <h5>Placa de Vídeo Gigabyte RTX 5070 Ti GAMING OC 16G NVIDIA GeForce, 16GB GDDR7, 256bits,
+                                RGB, DLSS, Ray Tracing - 9VN507TGO-00-G10</h5>
+                            <p>Preço:
+                            <h3>R$ 2000,00</h3>
+                            </p>
+                            <span>
+                                Marca: <a href="https://www.nvidia.com/pt-br/drivers/">NVIDIA</a>
+                            </span>
+                            <div class="flex coluna centro-vertical">
+                                <a href="">Comprar</a>
+                                <a href="">Adicionar ao carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="botao-catalogo-lp" href="paginas/catalogo.html">Conhecer mais produtos</a>
+        </section>
+    </main>
+
+    <footer class="flex coluna">
+        <section class="container">
+            <div class="info-rodape flex coluna">
+                <div class="loja flex">
+                    <img src="assets/img/Logo.svg" alt="">
+                    <img src="assets/img/Marca.svg" alt="">
+                </div>
+                <ul class="flex">
+                    <li><a href="paginas/home.html">Home</a></li>
+                    <li><a href="paginas/login.html">Login</a></li>
+                    <li><a href="paginas/cadastro.html">Cadastro</a></li>
+                    <li><a href="paginas/catalogo.html">Catálogo</a></li>
+                    <li><a href="paginas/sobre-nos.html">Sobre Nós</a></li>
+                </ul>
+                <div class="redes-sociais flex">
+                    <img src="assets/img/Instagram.svg" alt="">
+                    <img src="assets/img/YouTube.svg" alt="">
+                    <img src="assets/img/Twitter.svg" alt="">
+                    <img src="assets/img/Facebook-rodape.svg" alt="">
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
