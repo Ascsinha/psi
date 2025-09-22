@@ -8,7 +8,24 @@ def index():
 
 @app.route('/contato')
 def contato():
-    return 'mirella.a@escolar.ifrn.edu.br'
+    nome = 'Acsa Mirella'
+    email = 'mirella.a@escolar.ifrn.edu.br'
+    return render_template('contato.html', nome = nome, email = email)
+
+@app.route('/perfil', defaults = {'nome': 'fulano'}) # defaults = caso 'nome' não recebe o nome de usuário, a variável vai exibir 'fulano'
+@app.route('/perfil/<nome>')
+def perfil(nome):
+    nome = 'acsa'
+    return render_template('perfil.html', nome = nome)
+
+@app.route('/semestre/<int:x>') # <int:x> recebe um número que é transformado em inteiro
+def semestre(x):
+    y = x + 1
+    return render_template('semestre.html', x = x, y = y)
+
+@app.route('/soma/<int:n1>/<int:n2>')
+def soma(n1, n2):
+    return str(n1+n2)
     
 @app.route('/exemplo')
 def exemplo():
