@@ -30,9 +30,15 @@ for i in range(11):
 
 # 03 - Carlos está desenvolvendo um conversor de temperaturas. Crie um programa que receba uma temperatura em graus Celsius digitada pelo usuário e converta para Fahrenheit ou o contrário.
 
-temp = int(input("Digite a temperatura em celsius: "))
-f = (temp * 1.8) + 32
-print(f'A temperatura {temp}°C em Fahrenheit é {f:.1f} F°')
+conversao = int(input('Você deseja converter de Celsius para Fahrenheit ou de Fahrenheit para Celsius? /n Digite [1] para a primeira opção e [2] para a segunda opção: '))
+if conversao == 1:
+    temp = int(input("Digite a temperatura em Celsius: "))
+    f = (temp * 1.8) + 32
+    print(f'A temperatura {temp}°C em Fahrenheit é {f:.1f} F°')
+else:
+    temp = int(input("Digite a temperatura em Fahrenheit: "))
+    c = (temp - 32) / 1.8
+    print(f'A temperatura {temp}°F em Celsius é {c:.1f}C°')
 
 
 # 04 - Crie um jogo onde o computador sorteia um número aleatório entre 1 e 20. O jogador tem 3 tentativas para adivinhar o número. Após cada tentativa, o programa deve dizer se o chute foi maior, menor ou igual ao número sorteado. Se o jogador acertar, o jogo termina com uma mensagem de parabéns. Se errar todas, o número correto é revelado.
@@ -44,7 +50,37 @@ print(f'O seu número é {rd}')
 ''' 05 - Uma loja online cobra frete com base na distância até o cliente. Crie um programa que
 pergunte:
 ● A distância (em km) até o endereço do cliente
-● O peso da encomenda (em kg) '''
+● O peso da encomenda (em kg) 
 
+E aplique as seguintes regras:
+● Se a distância for até 100 km, o frete base é R$ 10,00; senão, é R$ 20,00
+● Para cada quilo acima de 5 kg, cobra-se R$ 2,00 adicionais
+Ao final, exiba o valor total do frete.
+- Se o item for frágil, o frete aumenta em R$ 10,00'''
 
+distancia = float(input('Qual é a distância até o endereço do cliente? '))
+peso_encomenda = float(input('Quanto pesa a sua encomenda? '))
+fragilidade = input('Seu item é frágil? Digite 1 para Sim e 2 para Não: ')
+perecivel = input('Seu item é perecível? Digite 1 para Sim e 2 para Não: ')
 
+if perecivel == 2:
+    if fragilidade == 1:
+        if distancia <= 100:
+            if peso_encomenda > 5:
+                frete = ((peso_encomenda - 5) * 2) + 20
+                print(f'O valor final do seu frete será de R${frete}')
+        else:
+            if peso_encomenda > 5:
+                frete = ((peso_encomenda - 5) * 2) + 30
+                print(f'O valor final do seu frete será de R${frete}')
+    else:
+        if distancia <= 100:
+            if peso_encomenda > 5:
+                frete = ((peso_encomenda - 5) * 2) + 10
+                print(f'O valor final do seu frete será de R${frete}')
+        else:
+            if peso_encomenda > 5:
+                frete = ((peso_encomenda - 5) * 2) + 20
+                print(f'O valor final do seu frete será de R${frete}') 
+else:
+    print('Não realizamos entregas de produtos perecíveis.')
