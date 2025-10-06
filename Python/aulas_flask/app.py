@@ -15,7 +15,6 @@ def contato():
 @app.route('/perfil', defaults = {'nome': 'fulano'}) # defaults = caso 'nome' não recebe o nome de usuário, a variável vai exibir 'fulano'
 @app.route('/perfil/<nome>')
 def perfil(nome):
-    nome = 'acsa'
     return render_template('perfil.html', nome = nome)
 
 @app.route('/semestre/<int:x>') # <int:x> recebe um número que é transformado em inteiro
