@@ -50,4 +50,4 @@ def verificaSeFormaTriangulo(A, B, C):
     else:
         return 'Não forma triângulo.'
 
-print(verificaSeFormaTriangulo(2, 4, 4)) 
+print(verificaSeFormaTriangulo(2, 4, 3))
