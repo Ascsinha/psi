@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -34,5 +34,24 @@ def exemplo():
 def exemplo2():
     return render_template('exemplo2.html')
 
+@app.route('/dados', )
+def dados():
+    return render_template('dados.html')
+
+# @app.route('/recebeDados', methods = ['GET'])
+# def recebeDados():
+#     nome = request.args['nome']
+#     telefone = request.args['telefone']
+#     return f'{nome} - {telefone}'
+
+@app.route('/recebeDados', methods = ['POST'])
+def recebeDados():
+    nome = request.form['nome']
+    telefone = request.form['telefone']
+    estado = request.form['estado']
+    formacao = request.form['formacao']
+    modalidades = request.form.getlist('modalidades')
+    return f'{nome} - {telefone} - {estado} - {formacao} - {modalidades}'
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
