@@ -53,5 +53,45 @@ def recebeDados():
     modalidades = request.form.getlist('modalidades')
     return f'{nome} - {telefone} - {estado} - {formacao} - {modalidades}'
 
+@app.route('/verificaridade/<int:idade>')
+def verificaridade(idade):
+    return render_template('verificaridade.html', idade = idade)        
+
+@app.route('/situacaofinal/<float:nota>')
+def situacaofinal(nota):
+    if nota >= 6.0:
+        return "Você está aprovado"
+    elif nota >= 3.0:
+        return "Você está em recuperação"
+    else:
+        return "Você está reprovado"
+    
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/verificarlogin', methods = ['POST'])
+def verificarlogin():
+    login = request.form['login']
+    senha = request.form['senha']
+    if login == 'admin' and senha == '12345':
+        return render_template('arearestrita.html')
+    else:
+        return 'Você não tem permissão de acessar essa página.'
+
+@app.route('/usuario/<nome>')
+def usuario(nome):
+    return render_template('usuario.html', nome = nome)
+
+@app.route('/produtos/<int:qtd>')
+def produtos(qtd):
+    return render_template('produtos.html', qtd = qtd)
+
+@app.route('/compras')
+def compras():
+    itens = ['Arroz', 'Feijão', 'Carne', 'Peixe', 'Frango']
+    itens = request.form.getlist('item')
+    return render_template('lista.html', itens = itens)
+
 if __name__ == '__main__':
     app.run(debug=True)
